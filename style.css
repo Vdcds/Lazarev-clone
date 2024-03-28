@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Reset some default styles to ensure consistent behavior across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a basic styling to the body */
+body {
+  font-family: "Roboto";
+  line-height: 1.6;
+  background-color: #111;
+  color: #fff;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+  padding: 2vw 10vw;
+}
+#nav-part-2 {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+#nav-part-2 h4 {
+  font-size: 1vw;
+  font-weight: 500;
+}
+#nav-bottom {
+  width: 78%;
+  height: 0;
+  /* background-color: red; */
+  bottom: 0%;
+  border-bottom: 1px solid #dadada;
+  position: absolute;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 2.5vw;
+  padding-left: 10.4vw;
+}
+#nav-bottom h5 span {
+  font-size: 0.76vw;
+  font-weight: 500;
+  opacity: 0;
+}
+#nav-bottom h5 {
+  margin-bottom: 1vh;
+}
+
+nav:hover #nav-bottom {
+  height: 150%;
+  bottom: -150%;
+  background-color: #111;
+}
+nav button {
+  background-color: #0da34e;
+  display: flex;
+  align-items: center;
+  padding: 12px 12px;
+  border: none;
+  font-size: 0.8vw;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+nav button svg {
+  height: 1.5vw;
+  width: 1.5vw;
+  font-weight: 700;
+  margin-left: 1.6vw;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#page1 h1 {
+  font-size: 9vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 9vw;
+}
+#page1 h1 svg {
+  height: 6.5vw;
+  width: 6.5vw;
+  background-color: #0da34e;
+  border-radius: 50%;
+}
+#page1 p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.4vh;
+  margin-top: 2vh;
+}
+#page1-something {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page1-something h4 {
+  font-weight: 400;
+  font-size: 2.5vh;
+  padding: 7px 10px;
+  margin: 4px;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+#page1-something h4:nth-last-child(2) {
+  border: none;
+  padding: 2px;
+}
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #1111;
+}
