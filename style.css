@@ -16,60 +16,62 @@ body {
 nav {
   position: fixed;
   width: 100%;
+  /* background-color: lightgreen; */
+  height: 18vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-transform: uppercase;
   justify-content: space-between;
   padding: 2vw 10vw;
+  z-index: 10;
 }
 #nav-part-2 {
   display: flex;
   gap: 2vw;
-  align-items: center;
+  align-items: flex-start;
+  padding: 1vh;
+  position: relative;
+  z-index: 10;
 }
 #nav-part-2 h4 {
   font-size: 1vw;
   font-weight: 500;
+  margin-bottom: 1.3vw;
+}
+#nav-part-2 h5 span {
+  font-size: 0.76vw;
+  font-weight: 500;
+  display: inline-block;
+  transform: translateY(25);
+}
+#nav-part-2 h5 {
+  margin-bottom: 1vh;
+  /* background-color: red; */
+  display: none;
+  overflow: hidden;
 }
 #nav-bottom {
   width: 78%;
-  height: 0;
-  /* background-color: red; */
-  bottom: 0%;
-  border-bottom: 1px solid #dadada;
+  height: 0vh;
+  top: 100%;
   position: absolute;
-  transition: all 0.5s ease;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  padding: 2.5vw;
-  padding-left: 10.4vw;
-}
-#nav-bottom h5 span {
-  font-size: 0.76vw;
-  font-weight: 500;
-  opacity: 0;
-}
-#nav-bottom h5 {
-  margin-bottom: 1vh;
+  background-color: #111;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
 }
 
-nav:hover #nav-bottom {
-  height: 150%;
-  bottom: -150%;
-  background-color: #111;
-}
 nav button {
   background-color: #0da34e;
   display: flex;
   align-items: center;
-  padding: 12px 12px;
+  padding: 10px 12px;
   border: none;
   font-size: 0.8vw;
   font-weight: 700;
   color: #fff;
   border-radius: 50px;
   text-transform: uppercase;
+
 }
 nav button svg {
   height: 1.5vw;
@@ -116,13 +118,72 @@ nav button svg {
   font-size: 2.5vh;
   padding: 7px 10px;
   margin: 4px;
-  border: 1px solid white;
   border-radius: 50px;
+  border: 1px solid white;
 }
 #page1-something h4:nth-last-child(2) {
   border: none;
   padding: 2px;
 }
+#moving-div{
+  /* background-color: red; */
+  margin-top: 10vh;
+  position: absolute;
+  bottom: 3%;
+  white-space: nowrap;
+  padding: 1.2vw;
+  overflow: hidden;
+  width: 44%;
+  display: flex;
+}
+  #moving-div .move{
+  display: inline-block;
+  animation-name: mobe;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  transition: ease-in;
+
+  }
+  #moving-div .move img{
+  height: 2vw;
+  margin: 0 3vw;
+  }
+
+  @keyframes mobe {
+    0%{
+      transform: translate3d(0,0,0);
+    }
+    100%{
+      transform: translate3d(-100%,0,0);
+
+    }
+  }
+  #blur-left{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, transparent,#111);;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    }
+    #blur-right{
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(to right,#111, transparent);;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      }
+
+    
+
+
+
+
 #page2 {
   height: 100vh;
   width: 100%;
